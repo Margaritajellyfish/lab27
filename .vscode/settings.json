@@ -60,6 +60,7 @@
     "iostream": "cpp",
     "string": "cpp",
     "iosfwd": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "tuple": "cpp"
   }
 }
