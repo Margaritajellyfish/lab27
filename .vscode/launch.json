@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/margarita/Documents/210labs/210labs/lab_27",
-      "program": "/Users/margarita/Documents/210labs/210labs/lab_27/build/Debug/outDebug"
+      "cwd": "/Users/margarita/Documents/210labs/210labs/lab_27/main",
+      "program": "/Users/margarita/Documents/210labs/210labs/lab_27/main/build/Debug/outDebug"
     }
   ]
 }
