@@ -8,8 +8,42 @@ int main() {
     
     // declarations
     map<string, tuple<int, string,string>> villagerList;
+    int choice;
     cout <<"1. Add Villager/n2. Delete Villager/n3. Increase Friendship/n4. Decrease Friendship/n5. Search for Villager/n6. Exit";
+     do {
+        cout << "\nMenu:\n";
+        cout << "1. Add Villager\n";
+        cout << "2. Delete Villager\n";
+        cout << "3. Increase Friendship\n";
+        cout << "4. Decrease Friendship\n";
+        cout << "5. Search for Villager\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
+        switch (choice) {
+            case 1:
+                addVillager(villagerColors);
+                break;
+            case 2:
+                deleteVillager(villagerColors);
+                break;
+            case 3:
+                increaseFriendship(villagerColors);
+                break;
+            case 4:
+                decreaseFriendship(villagerColors);
+                break;
+            case 5:
+                searchVillager(villagerColors);
+                break;
+            case 6:
+                cout << "Exiting program.\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 6);
     // insert elements into the map
     // note how the right-hand side of the assignment are the vector elements
     villagerList["Audie"] = {8, "Alligator", "Got a snack?"};
