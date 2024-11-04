@@ -3,14 +3,29 @@
 
 #include <vector>
 using namespace std;
+void addVillager(map<string, tuple<int, string, string>> &villagers) {
+    string name, species, description;
+    int friendshipLevel;
 
+    cout << "Enter villager name: ";
+    cin >> name;
+    cout << "Enter friendship level (integer): ";
+    cin >> friendshipLevel;
+    cout << "Enter species: ";
+    cin.ignore(); 
+    getline(cin, species);
+    cout << "Enter description: ";
+    getline(cin, description);
+
+    villagers.emplace(name, make_tuple(friendshipLevel, species, description));
+    cout << "Villager added successfully.\n";
+}
 int main() {
     
     // declarations
     map<string, tuple<int, string,string>> villagerList;
     int choice;
-    cout <<"1. Add Villager/n2. Delete Villager/n3. Increase Friendship/n4. Decrease Friendship/n5. Search for Villager/n6. Exit";
-     do {
+    do{
         cout << "\nMenu:\n";
         cout << "1. Add Villager\n";
         cout << "2. Delete Villager\n";
